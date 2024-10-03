@@ -19,6 +19,13 @@ function move() {
   }
   return user;
 }
+
+const handleMove = (div) =>{
+  if(div.textContent === ''){
+    div.textContent = move();
+    checkWin();
+  }
+}
 function resetGame() {
   div1.textContent = "";
   div2.textContent = "";
@@ -143,55 +150,37 @@ const checkWin = () => {
 
 
 div1.addEventListener("click", () => {
-  div1.textContent = move();
-
-  checkWin();
+  handleMove(div1);
 });
 
 div2.addEventListener("click", () => {
-  div2.textContent = move();
-
-  checkWin();
+  handleMove(div2);
 });
 
 div3.addEventListener("click", () => {
-  div3.textContent = move();
-
-  checkWin();
+  handleMove(div3);
 });
 
 div4.addEventListener("click", () => {
-  div4.textContent = move();
-
-  checkWin();
+  handleMove(div4);
 });
 
 div5.addEventListener("click", () => {
-  div5.textContent = move();
-
-  checkWin();
+  handleMove(div5);
 });
 
 div6.addEventListener("click", () => {
-  div6.textContent = move();
-
-  checkWin();
+  handleMove(div6);
 });
 
 div7.addEventListener("click", () => {
-  div7.textContent = move();
-
-  checkWin();
+  handleMove(div7);
 });
 
 div8.addEventListener("click", () => {
-  div8.textContent = move();
-
-  checkWin();
+  handleMove(div8);
 });
 
 div9.addEventListener("click", () => {
-  div9.textContent = move();
-
-  checkWin();
+  handleMove(div9);
 });
