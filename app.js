@@ -29,6 +29,8 @@ function resetGame() {
   div7.textContent = "";
   div8.textContent = "";
   div9.textContent = "";
+  p.style.backgroundColor = 'grey';
+  p.textContent = 'Play The Game !'
 }
 
 
