@@ -37,6 +37,9 @@ h1 {
     font-size: 3rem;
     /* border: 2px solid red; */
 }
+div{
+    -webkit-tap-highlight-color: transparent;
+}
 
 .box1, .box2, .box4, .box5, .box7, .box8{
     border-right: 5px solid grey;
@@ -70,4 +73,3 @@ p{
     border-radius: 1.5rem;
     color: white;
 }
-

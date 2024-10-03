@@ -30,7 +30,9 @@ function resetGame() {
   div8.textContent = "";
   div9.textContent = "";
 }
-function checkWin() {
+
+
+const checkWin = () => {
   // for rows
   if (
     (div1.textContent === div2.textContent &&
@@ -40,63 +42,103 @@ function checkWin() {
       div5.textContent === div9.textContent &&
       div1.textContent !== "")
   ) {
-    
     p.textContent = `${div1.textContent} Wins!`;
+    p.style.fontWeight = "bold";
+    p.style.backgroundColor = "green";
     setTimeout(() => {
       resetGame();
     }, 1000);
+    return;
   } else if (
     div4.textContent === div5.textContent &&
     div5.textContent === div6.textContent &&
     div4.textContent !== ""
   ) {
     p.textContent = `${div4.textContent} Wins!`;
+    p.style.fontWeight = "bold";
+    p.style.backgroundColor = "green";
     setTimeout(() => {
       resetGame();
     }, 1000);
+    return;
   } else if (
     div7.textContent === div8.textContent &&
     div8.textContent === div9.textContent &&
     div7.textContent !== ""
   ) {
     p.textContent = `${div7.textContent} Wins!`;
+    p.style.fontWeight = "bold";
+    p.style.backgroundColor = "green";
     setTimeout(() => {
       resetGame();
     }, 1000);
+    return;
   }
 
-  // col
+  // for columns
   if (
     div1.textContent === div4.textContent &&
     div4.textContent === div7.textContent &&
     div1.textContent !== ""
   ) {
     p.textContent = `${div1.textContent} Wins!`;
+    p.style.fontWeight = "bold";
+    p.style.backgroundColor = "green";
     setTimeout(() => {
       resetGame();
     }, 1000);
+    return;
   } else if (
     div2.textContent === div5.textContent &&
     div5.textContent === div8.textContent &&
     div2.textContent !== ""
   ) {
     p.textContent = `${div2.textContent} Wins!`;
+    p.style.fontWeight = "bold";
+    p.style.backgroundColor = "green";
     setTimeout(() => {
       resetGame();
     }, 1000);
+    return;
   } else if (
     (div3.textContent === div6.textContent &&
-    div6.textContent === div9.textContent &&
-    div3.textContent !== "") || (div3.textContent === div5.textContent &&
-    div5.textContent === div7.textContent &&
-    div3.textContent !== "")
+      div6.textContent === div9.textContent &&
+      div3.textContent !== "") ||
+    (div3.textContent === div5.textContent &&
+      div5.textContent === div7.textContent &&
+      div3.textContent !== "")
   ) {
     p.textContent = `${div3.textContent} Wins!`;
+    p.style.fontWeight = "bold";
+    p.style.backgroundColor = "green";
+    setTimeout(() => {
+      resetGame();
+    }, 1000);
+    return;
+  }
+
+  // Check for a tie
+  if (
+    div1.textContent !== "" &&
+    div2.textContent !== "" &&
+    div3.textContent !== "" &&
+    div4.textContent !== "" &&
+    div5.textContent !== "" &&
+    div6.textContent !== "" &&
+    div7.textContent !== "" &&
+    div8.textContent !== "" &&
+    div9.textContent !== ""
+  ) {
+    p.style.backgroundColor = "red";
+    p.textContent = "The Game Is Tie";
     setTimeout(() => {
       resetGame();
     }, 1000);
   }
-}
+};
+
+
+
 
 div1.addEventListener("click", () => {
   div1.textContent = move();
