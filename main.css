@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.404), rgba(255, 0, 191, 0.87), rgba(14, 1, 10, 0.349), rgba(1, 1, 12, 1));
+    background-size: 100% 100vh;
+    position: relative;
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 48px;
+}
+.board{
+    margin-top: 5rem;
+    height: 50vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* margin-top: 10rem; */
+    /* gap: 50px; */
+    
+}
+.container div{
+    /* padding: 5rem; */
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 3rem;
+    /* border: 2px solid red; */
+}
+
+.box1, .box2, .box4, .box5, .box7, .box8{
+    border-right: 5px solid grey;
+    
+
+}
+.box1, .box2, .box3, .box4, .box5, .box6{
+    border-bottom: 5px solid grey;
+    
+
+}
+
+p{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+    
+}
+
+.score{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center; /*horizontal*/
+    align-content: center; /* vertical */
+}
+
+.score p{
+    display: inline;
+    background-color: grey;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: white;
+}
+
