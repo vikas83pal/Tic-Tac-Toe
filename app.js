@@ -8,6 +8,44 @@ let div7 = document.querySelector(".box7");
 let div8 = document.querySelector(".box8");
 let div9 = document.querySelector(".box9");
 let p = document.querySelector("#winning");
+let pause = document.querySelector('#btn');
+let audio = document.querySelector('audio');
+
+audio.loop = true;
+
+
+// window.onload = () =>{
+//   try{
+//     audio.play();
+//   }catch(err){
+//     console.log(err);
+//   }
+// }
+
+// document.body.addEventListener("click", () =>{
+//   if(audio.paused){
+//     audio.play();
+//   }
+// })
+
+// pause.addEventListener('click', () => {
+//   if (!audio.paused) {
+//     audio.pause(); // Pause audio if it is currently playing
+//   }
+// });
+
+
+pause.addEventListener('click', () => {
+  if(!audio.paused){
+    audio.pause();
+    pause.textContent = 'Play The Music' ;
+    pause.style.backgroundColor = 'green';
+  }else{
+    audio.play();
+    pause.textContent = 'Pause The Music';
+    pause.style.backgroundColor = 'red';
+  }
+})
 let user = "";
 function move() {
   if (user === "") {

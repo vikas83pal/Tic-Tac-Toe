@@ -79,3 +79,18 @@ p{
     border-radius: 1.5rem;
     color: white;
 }
+
+.paused{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.paused button{
+    padding: 1rem 2rem;
+    background-color: red;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
